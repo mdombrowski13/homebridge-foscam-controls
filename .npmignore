@@ -1,0 +1,15 @@
+src/
+scripts/
+tests/
+coverage/
+*.md
+!README.md
+!CHANGELOG.md
+.eslintrc.json
+jest.config.js
+tsconfig*.json
+*.local.json
+.env
+camera.local.json
+DevPlan.md
+Architecture.md
