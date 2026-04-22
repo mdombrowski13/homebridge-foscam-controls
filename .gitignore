@@ -1,0 +1,10 @@
+node_modules/
+coverage/
+*.js.map
+.DS_Store
+
+# Local Homebridge config — may contain real camera IPs and credentials
+config.json
+*.local.json
+.env
+

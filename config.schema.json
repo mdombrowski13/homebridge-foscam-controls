@@ -1,0 +1,101 @@
+{
+  "pluginAlias": "FoscamControls",
+  "pluginType": "platform",
+  "singular": true,
+  "headerDisplay": "Configure each Foscam camera below. Each entry becomes an independent HomeKit accessory.",
+  "footerDisplay": "See the README for full documentation.",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Platform Name",
+        "type": "string",
+        "default": "Foscam Controls",
+        "required": true
+      },
+      "cameras": {
+        "title": "Cameras",
+        "type": "array",
+        "items": {
+          "title": "Camera",
+          "type": "object",
+          "properties": {
+            "name": {
+              "title": "Camera Name",
+              "type": "string",
+              "required": true,
+              "placeholder": "Driveway Camera"
+            },
+            "host": {
+              "title": "IP Address",
+              "type": "string",
+              "required": true,
+              "format": "hostname",
+              "placeholder": "192.168.1.101"
+            },
+            "port": {
+              "title": "Port",
+              "type": "integer",
+              "default": 88,
+              "minimum": 1,
+              "maximum": 65535,
+              "description": "HTTP port (default: 88). Use 443 for HTTPS."
+            },
+            "username": {
+              "title": "Username",
+              "type": "string",
+              "required": true,
+              "placeholder": "admin"
+            },
+            "password": {
+              "title": "Password",
+              "type": "string",
+              "required": true,
+              "x-schema-form": {
+                "type": "password"
+              }
+            },
+            "pollIntervalSeconds": {
+              "title": "Poll Interval (seconds)",
+              "type": "integer",
+              "default": 0,
+              "minimum": 0,
+              "description": "How often to poll camera state in the background. Set to 0 (default) to disable — state is fetched live on demand instead."
+            },
+            "modules": {
+              "title": "Modules — v1.0",
+              "type": "object",
+              "properties": {
+                "spotlight": {
+                  "title": "Spotlight (White LED)",
+                  "type": "boolean",
+                  "default": true,
+                  "description": "Enable white spotlight on/off control. Appears as a Lightbulb in HomeKit."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "layout": [
+    {
+      "key": "name"
+    },
+    {
+      "key": "cameras",
+      "type": "array",
+      "title": "Cameras",
+      "items": [
+        "cameras[].name",
+        "cameras[].host",
+        "cameras[].port",
+        "cameras[].username",
+        "cameras[].password",
+        "cameras[].pollIntervalSeconds",
+        "cameras[].modules.spotlight"
+      ]
+    }
+  ]
+}

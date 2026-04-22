@@ -1,0 +1,43 @@
+{
+  "name": "homebridge-foscam-controls",
+  "version": "1.0.0",
+  "description": "Homebridge plugin for Foscam IP camera controls — spotlight, security, and motion via HomeKit",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "lint": "eslint src --ext .ts",
+    "test": "jest --coverage",
+    "probe": "ts-node --project tsconfig.scripts.json scripts/probe-camera.ts",
+    "live-test": "ts-node --project tsconfig.scripts.json scripts/live-test.ts"
+  },
+  "keywords": [
+    "homebridge",
+    "homebridge-plugin",
+    "foscam",
+    "spotlight",
+    "camera",
+    "controls"
+  ],
+  "engines": {
+    "homebridge": "^1.8.5 || ^2.0.0",
+    "node": "^18.20.4 || ^20.15.1 || ^22 || ^24"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "@types/node": "^22.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "homebridge": "^1.11.4",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "homebridge": "^1.8.5 || ^2.0.0"
+  }
+}
