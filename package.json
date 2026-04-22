@@ -1,6 +1,6 @@
 {
   "name": "homebridge-foscam-controls",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Homebridge plugin for Foscam IP camera controls — spotlight, security, and motion via HomeKit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -24,7 +24,16 @@
     "homebridge": "^1.8.5 || ^2.0.0",
     "node": "^18.20.4 || ^20.15.1 || ^22 || ^24"
   },
+  "author": "Michael Dombrowski",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdombrowski13/homebridge-foscam-controls.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mdombrowski13/homebridge-foscam-controls/issues"
+  },
+  "homepage": "https://github.com/mdombrowski13/homebridge-foscam-controls#readme",
   "devDependencies": {
     "@types/jest": "^29.0.0",
     "@types/node": "^22.0.0",
@@ -36,8 +45,5 @@
     "ts-jest": "^29.0.0",
     "ts-node": "^10.0.0",
     "typescript": "^5.0.0"
-  },
-  "peerDependencies": {
-    "homebridge": "^1.8.5 || ^2.0.0"
   }
 }

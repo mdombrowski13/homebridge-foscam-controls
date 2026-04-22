@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.0.1] — 2026-04-22
+
+### Fixed
+
+- `config.schema.json` — moved `required` from individual field properties to object-level arrays (JSON Schema compliance)
+- `package.json` — removed redundant `peerDependencies` block; `engines.homebridge` already declares the version requirement
+
+---
+
 ## [1.0.0] — 2026-04-21
 
 ### Initial Release

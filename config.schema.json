@@ -6,12 +6,12 @@
   "footerDisplay": "See the README for full documentation.",
   "schema": {
     "type": "object",
+    "required": ["name"],
     "properties": {
       "name": {
         "title": "Platform Name",
         "type": "string",
-        "default": "Foscam Controls",
-        "required": true
+        "default": "Foscam Controls"
       },
       "cameras": {
         "title": "Cameras",
@@ -19,17 +19,16 @@
         "items": {
           "title": "Camera",
           "type": "object",
+          "required": ["name", "host", "username", "password"],
           "properties": {
             "name": {
               "title": "Camera Name",
               "type": "string",
-              "required": true,
               "placeholder": "Driveway Camera"
             },
             "host": {
               "title": "IP Address",
               "type": "string",
-              "required": true,
               "format": "hostname",
               "placeholder": "192.168.1.101"
             },
@@ -44,13 +43,11 @@
             "username": {
               "title": "Username",
               "type": "string",
-              "required": true,
               "placeholder": "admin"
             },
             "password": {
               "title": "Password",
               "type": "string",
-              "required": true,
               "x-schema-form": {
                 "type": "password"
               }
